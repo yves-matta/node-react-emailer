@@ -3,10 +3,10 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import { connect } from 'react-redux';
 import * as actions from '../actions';
 
+import Dashboard from './Dashboard';
 import Header from './Header';
 import Landing from './Landing';
-const Dashboard = () => <h2>Dashboard</h2>;
-const SurveyNew = () => <h2>SurveyNew</h2>;
+import SurveyNew from './surveys/SurveyNew';
 
 class App extends Component {
   componentDidMount() {
@@ -17,7 +17,7 @@ class App extends Component {
     return (
       <div className="container">
         <BrowserRouter>
-          <div>
+          <div className="container">
             <Header />
             <Switch>
               <Route component={Landing} exact path="/" />
@@ -34,7 +34,5 @@ class App extends Component {
 App.propTypes = {};
 
 App.defaultProps = {};
-
-// const mapStateToProps = state => state;
 
 export default connect(null, actions)(App);

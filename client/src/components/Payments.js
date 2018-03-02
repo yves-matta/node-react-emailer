@@ -21,4 +21,8 @@ class Payments extends Component {
   }
 }
 
+Payments.propTypes = {};
+
+Payments.defaultProps = {};
+
 export default connect(null, actions)(Payments);
